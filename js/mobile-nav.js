@@ -25,3 +25,30 @@ function hideNav(e) {
     document.getElementById("toggle-nav").style.width = 0;
     document.getElementById("overlay").classList.add('hidden');
 }
+
+$("#contact-form").submit(function(e) {
+    const data = {
+        name: $('#contact-name').val(),
+        email: $('#contact-email').val(),
+        phone: $('#contact-phone').val(),
+        message: $('#contact-message').val(),
+    };
+    $.ajax({
+        type: "POST",
+        url: '../php/sender.php',
+        data: data,
+        success: function() {
+            $(".overlay").removeClass("hidden").delay(2500).queue(function(next) {
+                $(this).addClass("hidden");
+                next();
+            });
+            $(".success-msg").removeClass("hidden").delay(2500).queue(function(next) {
+                $(this).addClass("hidden");
+                next();
+            });
+            $('#contact-form').trigger('reset');
+        }
+    });
+
+    e.preventDefault();
+})

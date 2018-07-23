@@ -19,6 +19,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'SfProDisplayMedium';
+    src: url('../webfonts/sf-pro-display-medium-webfont.woff2') format('woff2'), url('../webfonts/sf-pro-display-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -28,10 +35,13 @@ html {
 }
 
 body {
+    font-family: 'SfProDisplayRegular';
     background-color: #f3f4f4;
     background-image: url(../images/number-pattern.png);
     background-repeat: repeat-y;
+    background-size: cover;
     color: #000000;
+    font-size: 1.5rem;
 }
 
 a {
@@ -57,16 +67,23 @@ h2 {
     color: #004452;
     text-align: center;
     margin-top: 95px;
+    margin-bottom: 30px;
 }
 
 h2::before {
     content: url(../images/h2-icon.png);
 }
 
+h3 {
+    font-family: 'SfProDisplayMedium';
+    font-size: 1.875rem;
+    color: #004452;
+}
+
 .overlay {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
 }
@@ -176,7 +193,7 @@ h2::before {
     align-items: center;
 }
 
-.read-more-btn {
+.simple-btn {
     font-family: 'SfProDisplayRegular';
     font-weight: normal;
     font-size: 1.25rem;
@@ -189,7 +206,7 @@ h2::before {
     cursor: pointer;
 }
 
-.read-more-btn:hover {
+.simple-btn:hover {
     background-color: #004452;
 }
 
@@ -211,7 +228,7 @@ h2::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 25px;
+    padding: 0 25px 25px 25px;
 }
 
 .advantage-item {
@@ -265,7 +282,117 @@ h2::before {
     font-size: 1.75rem;
 }
 
+
+/* Team Section */
+
+.team-wrap {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Contact Section */
+
+.geometric-bg {
+    background-image: url(../images/geometric-bg.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-wrap {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.simple-form {
+    max-width: 615px;
+    width: 52.5%;
+    margin-top: 40px;
+    padding: 0 25px;
+}
+
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+}
+
+label {
+    font-size: 1.25rem;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.form-field,
+textarea {
+    font-family: 'SfProDisplayRegular';
+    font-weight: 300;
+    padding: 20px;
+    color: #004452;
+    font-size: 1.5rem;
+    background-color: #dfe0e0;
+    border: 1px solid #698c93;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+textarea {
+    margin-bottom: 75px;
+}
+
+.form-field:focus,
+textarea:focus {
+    background-color: #ffffff;
+    border: 1px solid #004452;
+    font-weight: normal;
+}
+
+.success-msg {
+    color: #ffffff;
+    background-color: #9dc342;
+    padding: 25px;
+    border-radius: 10px;
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 1920px) {
+    .rombs-on-side,
+    .romb-on-side {
+        position: relative;
+    }
+    .rombs-on-side::before {
+        content: url('../images/rombs-on-side-1.png');
+        position: absolute;
+        top: 235px;
+    }
+    .rombs-on-side::after {
+        content: url('../images/rombs-on-side-2.png');
+        position: absolute;
+        top: 25px;
+        right: 0;
+    }
+    .romb-on-side::before {
+        content: url('../images/romb-on-side-1.png');
+        position: absolute;
+    }
+    .romb-on-side::after {
+        content: url('../images/romb-on-side-2.png');
+        position: absolute;
+    }
+}
+
 @media (max-width: 800px) {
+    body {
+        font-size: 1.125rem;
+    }
     .logo img {
         transform: scale(0.75);
     }
@@ -337,6 +464,18 @@ h2::before {
     }
     .advantage-container {
         justify-content: center;
+    }
+    /* Contact Section */
+    .simple-form {
+        width: 100%;
+    }
+    label {
+        font-size: 1.125rem;
+    }
+    .form-field,
+    textarea {
+        font-size: 1.25rem;
+        padding: 15px;
     }
 }
 
