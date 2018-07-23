@@ -78,6 +78,7 @@ h3 {
     font-family: 'SfProDisplayMedium';
     font-size: 1.875rem;
     color: #004452;
+    text-align: center;
 }
 
 .overlay {
@@ -87,6 +88,9 @@ h3 {
     width: 100%;
     height: 100%;
 }
+
+
+/* Header Section */
 
 .header {
     background: linear-gradient(to right, #cacaca, #ececec, #cacaca);
@@ -191,6 +195,7 @@ h3 {
     text-align: center;
     flex-direction: column;
     align-items: center;
+    padding: 0 15px;
 }
 
 .simple-btn {
@@ -222,13 +227,14 @@ h3 {
 
 .about-wrap {
     flex-direction: column;
+    padding: 0 15px;
 }
 
 .advantage-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 25px 25px 25px;
+    padding: 0 10px 10px 10px;
 }
 
 .advantage-item {
@@ -246,6 +252,7 @@ h3 {
 .advantage-content {
     position: relative;
     height: 235px;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: right top;
 }
@@ -282,6 +289,18 @@ h3 {
     font-size: 1.75rem;
 }
 
+.partners {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.partner-item {
+    margin: 15px;
+}
+
 
 /* Team Section */
 
@@ -289,6 +308,7 @@ h3 {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    padding: 0 15px;
 }
 
 
@@ -312,6 +332,7 @@ h3 {
     width: 52.5%;
     margin-top: 40px;
     padding: 0 25px;
+    margin-bottom: 50px;
 }
 
 label,
@@ -363,6 +384,33 @@ textarea:focus {
     transform: translate(-50%, -50%);
 }
 
+
+/* Footer Section */
+
+.footer {
+    height: 126px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.3));
+}
+
+.footer-wrap {
+    justify-content: space-between;
+    padding-top: 40px;
+    flex-wrap: wrap;
+}
+
+.copy-right {
+    color: #ffffff;
+    font-family: 'SfProDisplayRegular';
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
+.footer .sub-nav .fab {
+    color: #ffffff;
+}
+
 @media (min-width: 1920px) {
     .rombs-on-side,
     .romb-on-side {
@@ -393,6 +441,7 @@ textarea:focus {
     body {
         font-size: 1.125rem;
     }
+    /* Header Section */
     .logo img {
         transform: scale(0.75);
     }
@@ -456,14 +505,17 @@ textarea:focus {
     }
     .read-more-btn {
         font-size: 1rem;
-        padding: 16px 60px;
+        padding: 10px 50px;
     }
-    /* Main Section */
+    /* About Section */
     h2 {
         font-size: 1.375rem;
     }
     .advantage-container {
         justify-content: center;
+    }
+    h3 {
+        font-size: 1.375rem;
     }
     /* Contact Section */
     .simple-form {
@@ -477,23 +529,53 @@ textarea:focus {
         font-size: 1.25rem;
         padding: 15px;
     }
+    /* Footer Section */
+    .footer .sub-nav {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 576px) {
     .advantage-item {
         height: 170px;
+        padding: 15px;
     }
     .advantage-content {
-        height: 100px;
         background-size: contain;
     }
     .advantage-pic {
         transform: scale(0.55);
         top: -110px;
-        left: -115px;
+        left: -100px;
     }
     .advantage-text {
         font-size: 1rem;
+    }
+    .partners {
+        justify-content: center;
+    }
+    .partner-item {
+        transform: scale(0.6);
+    }
+    .simple-btn {
+        font-size: 1rem;
+        padding: 10px 50px;
+    }
+    /* Footer Section */
+    .footer {
+        padding-bottom: 30px;
+    }
+    .copy-right {
+        width: 100%;
+        order: 2;
+        text-align: center;
+        padding: 30px 15px 0 15px;
+        font-size: 0.875rem;
+    }
+    .footer .sub-nav {
+        width: 100%;
+        order: 1;
+        justify-content: center;
     }
 }
 
