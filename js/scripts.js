@@ -4,17 +4,25 @@ window.addEventListener('load', toggleMobileMenu);
 
 function toggleMobileMenu() {
     if (document.documentElement.clientWidth < 800) {
-        document.getElementById("show-nav-btn").classList.remove('hidden');
-        document.getElementById("toggle-nav").style.width = 0;
-        document.getElementById("hide-nav-btn").classList.remove('hidden');
-        document.getElementById("show-nav-btn").addEventListener('click', showNav);
-        document.getElementById("hide-nav-btn").addEventListener('click', hideNav);
+        useMobileMenu();
     } else {
-        document.getElementById("show-nav-btn").classList.add('hidden');
-        document.getElementById("hide-nav-btn").classList.add('hidden');
-        document.getElementById("overlay").classList.add('hidden');
-        document.getElementById("toggle-nav").style.width = "auto";
+        useDesktopMenu();
     }
+}
+
+function useMobileMenu() {
+    document.getElementById("show-nav-btn").classList.remove('hidden');
+    document.getElementById("toggle-nav").style.width = 0;
+    document.getElementById("hide-nav-btn").classList.remove('hidden');
+    document.getElementById("show-nav-btn").addEventListener('click', showNav);
+    document.getElementById("hide-nav-btn").addEventListener('click', hideNav);
+}
+
+function useDesktopMenu() {
+    document.getElementById("show-nav-btn").classList.add('hidden');
+    document.getElementById("hide-nav-btn").classList.add('hidden');
+    document.getElementById("overlay").classList.add('hidden');
+    document.getElementById("toggle-nav").style.width = "auto";
 }
 
 function showNav(e) {
@@ -54,14 +62,16 @@ $("#contact-form").submit(function(e) {
     e.preventDefault();
 })
 
-$('.nav-link').on('click', function(e) {
-    $(".overlay").addClass('hidden');
-});
 
 $('a[href^="#"]').on('click', function(event) {
-    var target = $(this.getAttribute('href'));
+    const target = $(this.getAttribute('href'));
+    $('.nav-active').removeClass('nav-active');
+    $(this).addClass('nav-active');
     if (target.length) {
         event.preventDefault();
+        if (document.documentElement.clientWidth < 800) {
+            hideNav();
+        }
         $('html, body').stop().animate({
             scrollTop: target.offset().top
         }, 1000);
