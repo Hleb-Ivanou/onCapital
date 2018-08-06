@@ -66,7 +66,10 @@ $("#contact-form").submit(function(e) {
 $('a[href^="#"]').on('click', function(event) {
     const target = $(this.getAttribute('href'));
     $('.nav-active').removeClass('nav-active');
-    $(this).addClass('nav-active');
+    if ($(this).hasClass('nav-link')) {
+        $(this).addClass('nav-active');
+    }
+
     if (target.length) {
         event.preventDefault();
         if (document.documentElement.clientWidth < 800) {

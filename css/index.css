@@ -119,10 +119,6 @@ h3 {
     align-items: center;
 }
 
-.logo a.nav-active {
-    border-bottom: 0;
-}
-
 .header-nav {
     display: flex;
     align-items: center;
@@ -497,9 +493,6 @@ textarea:focus {
     /* Header Section */
     .logo img {
         transform: scale(0.75);
-    }
-    .logo a.nav-active {
-        border: 0;
     }
     .mobile-nav {
         cursor: pointer;
