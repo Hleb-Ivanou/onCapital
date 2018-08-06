@@ -119,8 +119,8 @@ h3 {
     align-items: center;
 }
 
-.logo a {
-    border-bottom: 2px solid rgb(255, 255, 255, 0);
+.logo a.nav-active {
+    border-bottom: 0;
 }
 
 .header-nav {
@@ -231,7 +231,7 @@ h3 {
     width: 32px;
     height: 75px;
     position: absolute;
-    bottom: 26vh;
+    bottom: 26vmin;
 }
 
 
@@ -497,6 +497,9 @@ textarea:focus {
     /* Header Section */
     .logo img {
         transform: scale(0.75);
+    }
+    .logo a.nav-active {
+        border: 0;
     }
     .mobile-nav {
         cursor: pointer;
