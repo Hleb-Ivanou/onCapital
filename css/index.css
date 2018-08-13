@@ -395,6 +395,7 @@ h3 {
     height: 100%;
     background-repeat: no-repeat;
     background-position: right top;
+    background-size: contain;
 }
 
 .advantage-item:nth-of-type(1) .advantage-content {
