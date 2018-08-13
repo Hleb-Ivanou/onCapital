@@ -36,8 +36,7 @@
                     <ul class="main-nav-list">
                         <li><a href="#portfolio-page" class="nav-link">portfolio</a></li>
                         <li><a href="#about-page" class="nav-link">about</a></li>
-
-                        <!-- <li><a href="#contact-page" class="nav-link ">team</a></li> -->
+                        <li><a href="#team-page" class="nav-link ">team</a></li>
                         <li><a href="#contact-page" class="nav-link">contact</a></li>
                     </ul>
                 </nav>
@@ -235,7 +234,7 @@
             </div>
         </section>
     </div>
-    <div class="additional-bg-2 rombs-on-side">
+    <div class="additional-bg-1 rombs-on-side">
         <section class="about" id="about-page">
             <div class="wrapper about-wrap">
                 <h2>OnCapital is:</h2>
@@ -283,20 +282,69 @@
             </div>
         </section>
     </div>
-    <!-- <div class="additional-bg-1 romb-on-side">
+    <div class="additional-bg-2 romb-on-side">
         <section class="team" id="team-page">
             <div class="wrapper team-wrap">
                 <h2>Team</h2>
-                <p>We are professional investors and entrepreneurs driving innovation based on Blockchain technology.</p>
-                <p>We don't stand still and are constantly ready to discover something new for ourselves.</p>
-                <section class="team-container">
-
+                <section class="team-info">
+                    <p>Established in March of 2006, DFJ DragonFund was the joint venture between the internationally recognized venture capital firm Draper Fisher Jurvetson (DFJ) and DragonVenture, which helped pioneer venture capital in China in the late
+                        90’s. Since its inception, DFJ DragonFund managed two US Dollar funds “DFJ DragonFund I & DFJ DragonFund II” and one RMB fund. In 2014, the DFJ Global Network rebranded as the Draper Venture Network. With the launch of our 3rd
+                        US Dollar fund in 2016, DFJ DragonFund henceforward became known as DraperDragon.</p>
+                    <p>We are a sector agnostic early stage fund. We look for companies with innovative technologies and business models with market appeal in Silicon Valley and in China. With our unique depth of experience and knowledge, our team can add
+                        value and resources in a broad manner. We are headquartered in Silicon Valley and have management and consulting offices in Shanghai, China.</p>
+                    <p>As a member of the Draper Venture Network, we draw upon the substantial resources and capabilities developed over two decades of venture capital investing.</p>
+                </section>
+                <hr class="line first-line" noshade>
+                <hr class="line second-line" noshade>
+                <section class="team-slider">
+                    <section class="team-item">
+                        <div class="team-item-content">
+                            <figure>
+                                <div class="team-item-cont">
+                                    <div class="team-item-subcont">
+                                        <img src="images/team-item-1.jpg" alt="Chalum Choojit">
+                                    </div>
+                                </div>
+                                <figcaption class="team-item-legend">
+                                    <p class="team-item-title">Chalum Choojit</p>
+                                    <p class="team-item-subtitle">Founder</p>
+                                </figcaption>
+                            </figure>
+                            <article>
+                                <p>Mr. Chalum Choojit is the founder and CEO of Global Microtrading and the founder of OnCapital fund. He has extensive experience in the field of management and financial technologies. He worked as an economic and risk consultant
+                                    for Thailand crypto funds.</p>
+                                <p>He founded a non-commercial company in Bangkok, which supported core-developers of bitcoin protocols.</p>
+                                <p>I specialize in cryptocurrency investment as I consider it to be one of the most important innovations since the invention of the Internet."</p>
+                            </article>
+                        </div>
+                    </section>
+                    <section class="team-item">
+                        <div class="team-item-content">
+                            <figure>
+                                <div class="team-item-cont">
+                                    <div class="team-item-subcont">
+                                        <img src="images/team-item-1.jpg" alt="Chalum Choojit">
+                                    </div>
+                                </div>
+                                <figcaption class="team-item-legend">
+                                    <p class="team-item-title">Chalum Choojit</p>
+                                    <p class="team-item-subtitle">Founder</p>
+                                </figcaption>
+                            </figure>
+                            <article>
+                                <p>Mr. Chalum Choojit is the founder and CEO of Global Microtrading and the founder of OnCapital fund. He has extensive experience in the field of management and financial technologies. He worked as an economic and risk consultant
+                                    for Thailand crypto funds.</p>
+                                <p>He founded a non-commercial company in Bangkok, which supported core-developers of bitcoin protocols.</p>
+                                <p>I specialize in cryptocurrency investment as I consider it to be one of the most important innovations since the invention of the Internet."</p>
+                            </article>
+                        </div>
+                    </section>
                 </section>
             </div>
         </section>
-    </div> -->
+    </div>
     <div class="geometric-bg">
-        <div class="additional-bg-2">
+        <div class="additional-bg-1">
             <section class="contact" id="contact-page">
                 <div class="wrapper contact-wrap">
                     <h2>Contact Us</h2>
@@ -387,6 +435,13 @@
                 }
 
             }]
+        });
+        $(".team-slider").slick({
+            dots: true,
+            centerMode: true,
+            centerPadding: 0,
+            rows: 1,
+            slidesPerRow: 1,
         });
     </script>
     <script src="js/scripts.js"></script>

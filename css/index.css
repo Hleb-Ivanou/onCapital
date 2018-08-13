@@ -452,6 +452,115 @@ h3 {
     padding: 0 15px;
 }
 
+.team-info {
+    font-family: 'SfProDisplayRegular';
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.team-info p {
+    margin-bottom: 40px;
+}
+
+.line {
+    border-color: #004452;
+    background-color: #004452;
+}
+
+.first-line {
+    width: 25%;
+}
+
+.second-line {
+    width: 10%;
+}
+
+.team-slider {
+    max-width: 1140px;
+    width: inherit;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.team-item {
+    font-size: 0;
+}
+
+.team-item-content {
+    display: flex;
+}
+
+.team-item figure,
+.team-item article {
+    float: left;
+}
+
+.team-item figure {
+    margin-right: 40px;
+}
+
+.team-item article {
+    font-family: 'SfProDisplayMedium';
+    font-size: 1.5rem;
+    color: #004452;
+    font-style: italic;
+    font-weight: normal;
+    padding: 45px 15px;
+}
+
+.team-item article p {
+    margin-bottom: 40px;
+}
+
+.team-item-cont {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.team-item-cont::after {
+    content: url(../images/vertical-rombs.png);
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 30px);
+}
+
+.team-item-subcont {
+    width: 211px;
+    height: 211px;
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 68, 82, 0.36);
+}
+
+.team-item-subcont img {
+    position: absolute;
+    transform: rotate(-45deg);
+    top: -95px;
+}
+
+.team-item-legend {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.team-item-title {
+    font-family: 'SfProDisplaySemibold';
+    font-size: 1.75rem;
+    color: #004452;
+}
+
+.team-item-subtitle {
+    font-family: 'SfProDisplaySemibold';
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
 
 /* Contact Section */
 
@@ -612,10 +721,16 @@ textarea:focus {
     .romb-on-side::before {
         content: url('../images/romb-on-side-1.png');
         position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 0;
     }
     .romb-on-side::after {
         content: url('../images/romb-on-side-2.png');
         position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 0;
     }
 }
 
@@ -707,6 +822,7 @@ textarea:focus {
     }
     .portfolio-item-title {
         font-size: 0.8125rem;
+        bottom: 7px;
     }
     /* About Section */
     h2 {
@@ -717,6 +833,19 @@ textarea:focus {
     }
     h3 {
         font-size: 1.375rem;
+    }
+    /* Team Section */
+    .team-info {
+        font-size: 1rem;
+    }
+    .team-item-title {
+        font-size: 1.125rem;
+    }
+    .team-item-subtitle {
+        font-size: 0.875rem;
+    }
+    .team-item article {
+        font-size: 1rem;
     }
     /* Contact Section */
     .simple-form {
@@ -780,6 +909,14 @@ textarea:focus {
     .simple-btn {
         font-size: 1rem;
         padding: 10px 50px;
+    }
+    /* Team Section */
+    .team-item-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-item figure {
+        margin-right: 0;
     }
     /* Footer Section */
     .copy-right {
