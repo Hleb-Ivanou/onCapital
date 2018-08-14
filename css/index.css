@@ -542,7 +542,8 @@ h3 {
 .team-item-subcont img {
     position: absolute;
     transform: rotate(-45deg);
-    top: -95px;
+    top: -60px;
+    left: -75px;
 }
 
 .team-item-legend {
@@ -624,6 +625,7 @@ textarea:focus {
 }
 
 .success-msg {
+    font-family: 'SfProDisplayRegular';
     color: #ffffff;
     background-color: #9dc342;
     padding: 25px;
