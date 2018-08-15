@@ -833,8 +833,8 @@ textarea:focus {
         display: none !important;
     }
     .portfolio-item-pic img {
-        width: 60%;
-        height: 60%;
+        width: 50%;
+        height: 50%;
     }
     .portfolio-item-title {
         font-size: 0.8125rem;
