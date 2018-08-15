@@ -300,6 +300,7 @@ h3 {
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 .slick-arrow {
@@ -339,7 +340,6 @@ h3 {
 .slick-dots {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
 }
 
 .slick-dots li button {
@@ -429,6 +429,8 @@ h3 {
     font-family: 'SfProDisplayRegular';
     font-weight: normal;
     font-size: 1.25rem;
+    text-align: right;
+    line-height: 1.2;
 }
 
 .partners {
@@ -461,6 +463,8 @@ h3 {
 
 .team-info p {
     margin-bottom: 40px;
+    text-align: justify;
+    line-height: 1.2;
 }
 
 .line {
@@ -480,7 +484,6 @@ h3 {
     max-width: 1140px;
     width: inherit;
     margin: 0 auto;
-    padding-bottom: 40px;
 }
 
 .team-item {
@@ -506,11 +509,13 @@ h3 {
     color: #004452;
     font-style: italic;
     font-weight: normal;
-    padding: 45px 15px;
+    padding: 45px 15px 0 15px;
 }
 
 .team-item article p {
     margin-bottom: 40px;
+    text-align: justify;
+    line-height: 1.2;
 }
 
 .team-item-cont {
@@ -549,6 +554,7 @@ h3 {
 .team-item-legend {
     margin-top: 40px;
     text-align: center;
+    line-height: 1.5;
 }
 
 .team-item-title {
@@ -819,6 +825,12 @@ textarea:focus {
         padding: 10px 50px;
     }
     /* Portfolio Section */
+    .portfolio-wrap {
+        height: auto;
+    }
+    .slick-arrow {
+        display: none !important;
+    }
     .portfolio-item-pic img {
         width: 60%;
         height: 60%;
@@ -826,6 +838,7 @@ textarea:focus {
     .portfolio-item-title {
         font-size: 0.8125rem;
         bottom: 7px;
+        white-space: normal;
     }
     /* About Section */
     h2 {
