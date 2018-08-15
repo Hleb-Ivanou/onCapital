@@ -340,6 +340,7 @@ h3 {
 .slick-dots {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .slick-dots li button {
