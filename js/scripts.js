@@ -63,6 +63,15 @@ $("#contact-form").submit(function(e) {
 })
 
 
+$('body').on('click', closeFormPopup);
+
+function closeFormPopup(e) {
+    if ($(e.target).hasClass("close-btn") || !$(e.target).hasClass("success-msg")) {
+        $(".success-msg").addClass("hidden");
+        $(".overlay").addClass("hidden");
+    }
+}
+
 $('a[href^="#"]').on('click', function(event) {
     const target = $(this.getAttribute('href'));
     $('.nav-active').removeClass('nav-active');
@@ -97,4 +106,4 @@ function sliderFix() {
     $(".porfolio-item").height(porfolioItemHeight);
     $(".porfolio-item").width($(".porfolio-item").first().width());
 
-}
+};

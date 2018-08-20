@@ -85,7 +85,7 @@ h2 {
     font-size: 2.25rem;
     color: #004452;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 95px;
     margin-bottom: 30px;
 }
 
@@ -272,7 +272,7 @@ h3 {
     /* border: 1px solid rgba(136, 163, 166, 0.8); */
     box-shadow: inset 0 0 1px #575858, 0 0 2px #cfd0d0;
     cursor: pointer;
-    margin: 15px;
+    margin: 22px 15px;
 }
 
 .porfolio-item:hover {
@@ -459,7 +459,7 @@ h3 {
 .team-info {
     font-family: 'SfProDisplayRegular';
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .team-info p {
@@ -468,17 +468,22 @@ h3 {
     line-height: 1.2;
 }
 
+.lines {
+    margin-bottom: 40px;
+}
+
 .line {
     border-color: #004452;
     background-color: #004452;
+    text-align: left;
 }
 
 .first-line {
-    width: 25%;
+    width: 40%;
 }
 
 .second-line {
-    width: 10%;
+    width: 15%;
 }
 
 .team-slider {
@@ -548,12 +553,12 @@ h3 {
 .team-item-subcont img {
     position: absolute;
     transform: rotate(-45deg);
-    top: -60px;
-    left: -75px;
+    top: -90px;
+    left: -100px;
 }
 
 .team-item-legend {
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
     line-height: 1.5;
 }
@@ -631,7 +636,19 @@ textarea:focus {
     font-weight: normal;
 }
 
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
 .success-msg {
+    position: relative;
     font-family: 'SfProDisplayRegular';
     color: #ffffff;
     background-color: #9dc342;
@@ -693,10 +710,11 @@ textarea:focus {
     font-size: 1rem;
 }
 
-.footer-addres::before {
+
+/* .footer-addres::before {
     content: url('../images/addres-icon.png');
     margin-right: 10px;
-}
+} */
 
 .footer-email::before {
     content: url('../images/email-icon.png');
@@ -713,6 +731,24 @@ textarea:focus {
 }
 
 @media (min-width: 1920px) {
+    .portfolio,
+    .about {
+        height: 100vh;
+    }
+    /* About page */
+    .advantage-item {
+        width: 500px;
+        height: 250px;
+    }
+    .advantage-pic {
+        transform: scale(0.9);
+        top: -50px;
+        left: -65px;
+    }
+    .advantage-text {
+        width: 50%;
+        font-size: 1.4rem;
+    }
     .rombs-on-side,
     .romb-on-side {
         position: relative;
