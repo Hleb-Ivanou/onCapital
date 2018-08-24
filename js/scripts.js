@@ -12,7 +12,7 @@ function toggleMobileMenu() {
 
 function useMobileMenu() {
     document.getElementById("show-nav-btn").classList.remove('hidden');
-    document.getElementById("toggle-nav").style.width = 0;
+    document.getElementById("toggle-nav").style.right = `-${document.getElementById("toggle-nav").offsetWidth}px`;
     document.getElementById("hide-nav-btn").classList.remove('hidden');
     document.getElementById("show-nav-btn").addEventListener('click', showNav);
     document.getElementById("hide-nav-btn").addEventListener('click', hideNav);
@@ -26,12 +26,12 @@ function useDesktopMenu() {
 }
 
 function showNav(e) {
-    document.getElementById("toggle-nav").style.width = "80%";
+    document.getElementById("toggle-nav").style.right = "0px";
     document.getElementById("overlay").classList.remove('hidden');
 }
 
 function hideNav(e) {
-    document.getElementById("toggle-nav").style.width = 0;
+    document.getElementById("toggle-nav").style.right = `-${document.getElementById("toggle-nav").offsetWidth}px`;
     document.getElementById("overlay").classList.add('hidden');
 }
 
@@ -47,11 +47,11 @@ $("#contact-form").submit(function(e) {
         url: '../php/sender.php',
         data: data,
         success: function() {
-            $(".overlay").removeClass("hidden").delay(2500).queue(function(next) {
+            $(".overlay").removeClass("hidden").delay(5000).queue(function(next) {
                 $(this).addClass("hidden");
                 next();
             });
-            $(".success-msg").removeClass("hidden").delay(2500).queue(function(next) {
+            $(".success-msg").removeClass("hidden").delay(5000).queue(function(next) {
                 $(this).addClass("hidden");
                 next();
             });
@@ -66,9 +66,11 @@ $("#contact-form").submit(function(e) {
 $('body').on('click', closeFormPopup);
 
 function closeFormPopup(e) {
-    if ($(e.target).hasClass("close-btn") || !$(e.target).hasClass("success-msg")) {
-        $(".success-msg").addClass("hidden");
-        $(".overlay").addClass("hidden");
+    if (!$(".success-msg").hasClass("hidden")) {
+        if ($(e.target).hasClass("close-btn") || !$(e.target).hasClass("success-msg")) {
+            $(".success-msg").addClass("hidden");
+            $(".overlay").addClass("hidden");
+        }
     }
 }
 

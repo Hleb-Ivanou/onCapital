@@ -802,18 +802,17 @@ textarea:focus {
         color: #ffffff;
         font-size: 2rem;
         margin: 17px;
-        display: flex;
         align-items: center;
     }
     .mobile-nav-show {
         color: #1d4653;
     }
     .header-nav {
-        width: 80%;
+        width: auto;
+        right: 0;
         flex-direction: column;
         position: fixed;
         align-items: flex-start;
-        right: 0;
         height: 100%;
         background: #929292;
     }
